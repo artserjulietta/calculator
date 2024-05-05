@@ -7,6 +7,7 @@ def test_calculate_addition():
 def test_calculate_division():
     assert calculate(8, 0, '/') == "Ошибка: Деление на ноль."
     assert calculate(8, 2, '/') == 4
+    assert calculate(8, 1, '/') == 8
 
 def test_calculate_unknown_operation():
     assert calculate(5, 5, 'unknown') == "Неизвестная операция."
