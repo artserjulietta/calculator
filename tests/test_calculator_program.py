@@ -5,11 +5,18 @@ def test_calculate_addition():
     assert calculate(1, 1, '+') == 2
 
 def test_calculate_division():
+    assert calculate(8, 0, '/') == "Ошибка: Деление на ноль."
     assert calculate(8, 2, '/') == 4
 
 def test_calculate_unknown_operation():
     assert calculate(5, 5, 'unknown') == "Неизвестная операция."
 
+def test_calculate_sub():
+    assert calculate(8, 2, '-') == 6
+
+def test_calculate_mult():
+    assert calculate(8, 2, '*') == 16
+    
 '''
 Задача. В настоящий момент реализовано три unit-теста
 Проверяется корректность работы калькулятора для действий сложения, деления и неизвестной операции
